@@ -1,13 +1,18 @@
 import requests
 import streamlit as st
-import requests as r
-from scripts import helpers
+import requests
+import sys
 
-config = helpers.get_config()
+sys.path.insert(0, '../scripts/')
+from helpers import get_config
+
+config = get_config()
 
 # sidebar
 st.sidebar.header('Information')
-
+side_information_text = st.sidebar.write('This application has been created to test and demonstrate the required functionality for the mini-challenge in the module Cloud Infrastructure and Computing. \
+                      After an image has been uploaded and the right mode is selected, the image will be sent to a FastAPI, which in return is connected to Google Cloud Services. \
+                      If Mode is "Mocked" a default response will be returned. Else a face detection will be performed on the input image.')
 
 st.sidebar.header('Configuration')
 
@@ -30,6 +35,6 @@ if st.button('Run face detection'):
         payload = {}
         headers = {}
 
-        response = requests.request("POST", config['FASTAPI_URL'], headers=headers, data=payload)
+        response = requests.request("POST", config['FASTAPI_URL'] + '/predict', headers=headers, data=payload)
     else:
         st.warning("Please upload an image first")
