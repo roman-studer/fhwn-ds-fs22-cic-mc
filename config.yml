@@ -4,3 +4,7 @@ HARD_LIMIT: 250 # max allowed spending on google cloud services (in $)
 # dirs
 DIR_DATA: 'data/'
 DIR_SCRIPTS: 'scripts/'
+
+# urls
+FASTAPI_URL: 127.0.0.1:8000
+
