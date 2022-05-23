@@ -1,0 +1,12 @@
+- [ ] Document project in readme
+- [ ] Create Streamlit App for Easy use of API
+- [ ] Test api call (face recognition)
+    - [ ] Upload Raw Image
+    - [ ] Return Image with superimposed bounding box of image
+- [ ] Fast API -> Endpoint "predict"
+- [ ] Monitoring
+    - [ ] N Requests
+    - [ ] Costs (total)
+    - [ ] Cancel Requests if necessary
+    - [ ] Logging of active nodes (Kubernetes pods)
+
