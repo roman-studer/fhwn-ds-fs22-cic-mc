@@ -1,0 +1,6 @@
+MOCK: True # if true no outgoing call to the cloud is made
+HARD_LIMIT: 250 # max allowed spending on google cloud services (in $)
+
+# dirs
+DIR_DATA: 'data/'
+DIR_SCRIPTS: 'scripts/'
