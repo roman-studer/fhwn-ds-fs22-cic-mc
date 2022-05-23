@@ -1,11 +1,14 @@
 from fastapi import FastAPI
 from fastapi.exceptions import HTTPException
-from scripts import helpers
 from cloud_services import detect_faces
+import sys
 
-config = helpers.get_config()
+sys.path.insert(0, '../scripts')
+from helpers import get_config
 
-# run application with: uvicorn main:app --reload
+config = get_config()
+
+# run application with: uvicorn app:app --reload
 app = FastAPI()
 
 
